@@ -745,7 +745,8 @@ a:active {
 }
 
 .hentry {
-	margin: 0.5em 0 1em;
+		/*	margin: 0.5em 0 1em; */
+		margin: 0 0 1em;
 }
 
 /*.byline,
@@ -900,7 +901,7 @@ a {font-color: #0033a0;}
 .site-description {font-size: x-small; color: #777; margin-top: -20px; margin-left: 20px;  font-family: 'PT Sans Narrow', sans-serif; font-weight: 400;}
 .site-branding a {margin-bottom: 0px; }
 
-article {padding: 0.5em; border-color: #c6093b #d6194b #e6295b #d6194b; border-radius: 2px; border-style: solid; border-width: 1px;}
+article {padding: 8px; border-color: #c6093b #d6194b #e6295b #d6194b; border-radius: 2px; border-style: solid; border-width: 1px;}
 
 .entry-content {margin-top: 2px;}
 /* #primary-menu {position: absolute; top: 35px; left: 350px; width: 250px; font-size: x-small} */
@@ -941,24 +942,29 @@ h1.page-title {padding: 8px; background-color: black; font-family: 'PT Caption',
 
 #colophon {font-family: 'PT Sans Narrow', sans-serif; font-size: small}
 
+/* All pages stuff */
+#page {font-family: "PT Serif", serif; margin: auto;}
+
+/* FRONT PAGE STUFF */
+.layout-region > h2 {font-family: 'PT Sans',sans-serif; color: #aaa; padding-left: 8px; margin: 0px;}
 
 /* Laptop layout: 1080px */
 @media only screen and (min-width: 992px) {
 #secondary {max-width: 200px; position: absolute; left: 600px; top: 50px; border-left: 3px #ccc solid; padding-left: 1em; margin-left: 1em;}
 #primary {max-width: 600px;}
-#page {max-width: 800px; margin: auto; font-family: "PT Serif", serif; position: relative;}
+#page {max-width: 800px;  position: relative;}
 #front .site-footer {margin-top:2000px;}
 #front .hfeed {width: 1000px}
 #front #main {position: relative; width: 1000px; margin: auto; }
 #highlighted {width: 400px; position: absolute; left: 0px; top: 0px; }
-#highlighted > h1 {display: none}
+#highlighted > h2 {display: none}
 #highlighted article {padding: 0em 1em 3px 1em; border: none}
-#region-two {width: 200px; left: 400px; top: 0px; position: absolute; max-height: 2000px; }
-#region-three {width: 200px; position: absolute; left: 0px; top: 500px; max-height: 1500px;}
+#region-two {width: 200px; left: 400px; top: 0px; position: absolute; max-height: 2000px; border-left: 1px solid #c6093b;}
+#region-three {width: 200px; position: absolute; left: 0px; top: 500px; max-height: 1500px; border-right: 1px solid #c6093b;}
 #region-four {width: 200px; position: absolute; left: 200px; top: 500px; max-height: 1500px;}
-#region-five {width: 200px; position: absolute; left: -200px; top: 0px; }
+#region-five {width: 200px; position: absolute; left: -200px; top: 0px; border-right: 1px solid #c6093b;}
 
-
+article {border: none}
 }
 
 /*  Tablet Layout: 768px. */
@@ -969,6 +975,7 @@ h1.page-title {padding: 8px; background-color: black; font-family: 'PT Caption',
 .content-area{width:63%;padding:0;float:left;display:inline; /* background-color: red; */}
 .widget-area{width:35%;padding:0;float:right;display:inline;}
 .site-footer{width:100%;padding:0;}
+#page {width: 600px; margin: auto;}
 }
 /*  Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
