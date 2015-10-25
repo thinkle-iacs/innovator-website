@@ -25,13 +25,13 @@ function innovator_posted_on() {
 	);
 
 	$posted_on = sprintf(
-		esc_html_x( 'Posted on %s', 'post date', 'innovator' ),
+		esc_html_x( '%s', 'post date', 'innovator' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
 	$byline = sprintf(
 		esc_html_x( 'by %s', 'post author', 'innovator' ),
-		'<span class="author vcard">get_the_author()</a></span>'
+		'<span class="author vcard">' . get_the_author() . '</a></span>'
 	);
 
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
