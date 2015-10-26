@@ -150,3 +150,52 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+
+
+function wpb_mce_buttons_2($buttons) {
+	array_unshift($buttons, 'styleselect');
+	return $buttons;
+	}
+add_filter('mce_buttons_2', 'wpb_mce_buttons_2');
+
+/*
+* Callback function to filter the MCE settings
+*/
+
+function my_mce_before_init_insert_formats( $init_array ) {  
+
+/* From http://www.wpbeginner.com/wp-tutorials/how-to-add-custom-styles-to-wordpress-visual-editor/ */
+	
+// Define the style_formats array
+
+	$style_formats = array(  
+		// Each array child is a format with it's own settings
+		array(  
+			'title' => 'Callout (left)',  
+			'block' => 'div',  
+			'classes' => ('callout','callout-left'),
+			'wrapper' => true,
+			
+		),  
+		array(  
+			'title' => 'Callout (right)',  
+			'block' => 'div',  
+			'classes' => ('callout','callout-right'),
+			'wrapper' => true,
+		),
+		array(  
+			'title' => 'Narrow Table',  
+			'block' => 'table',  
+			'classes' => 'narrow-table',
+			'wrapper' => true,
+		),
+	);  
+	// Insert the array, JSON ENCODED, into 'style_formats'
+	$init_array['style_formats'] = json_encode( $style_formats );  
+	
+	return $init_array;  
+  
+} 
+// Attach callback to 'tiny_mce_before_init' 
+add_filter( 'tiny_mce_before_init', 'my_mce_before_init_insert_formats' ); 
