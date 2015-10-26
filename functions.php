@@ -174,14 +174,14 @@ function my_mce_before_init_insert_formats( $init_array ) {
 		array(  
 			'title' => 'Callout (left)',  
 			'block' => 'div',  
-			'classes' => ('callout','callout-left'),
+			'classes' => 'callout callout-left',
 			'wrapper' => true,
 			
 		),  
 		array(  
 			'title' => 'Callout (right)',  
 			'block' => 'div',  
-			'classes' => ('callout','callout-right'),
+			'classes' => 'callout callout-right',
 			'wrapper' => true,
 		),
 		array(  
