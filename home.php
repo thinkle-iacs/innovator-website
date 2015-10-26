@@ -18,7 +18,7 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 		  <div id="highlighted" class="layout-region">
-		    <h2>Latest</h2>
+		    <h2>Latest</h2> <!-- Hello World (quiet version) -->
 		      <?php $query = new WP_Query( array( 'category_name' => 'highlight' ) ); ?>
 		      
 		      <?php /* Start the Loop */ ?>
