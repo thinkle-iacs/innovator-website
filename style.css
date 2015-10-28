@@ -963,7 +963,7 @@ h1.page-title {padding: 8px; background-color: black; font-family: 'PT Caption',
 #highlighted > h2 {display: none}
 #highlighted article {padding: 0em 1em 3px 1em; border: none}
 #region-two {width: 200px; left: 600px; top: 0px; position: absolute; max-height: 2000px; border-left: 1px solid #c6093b;}
-#region-three {width: 200px; position: absolute; left: 200pxpx; top: 500px; max-height: 1500px; border-right: 1px solid #c6093b;}
+#region-three {width: 200px; position: absolute; left: 200px; top: 500px; max-height: 1500px; border-right: 1px solid #c6093b;}
 #region-four {width: 200px; position: absolute; left: 400px; top: 500px; max-height: 1500px;}
 #region-five {width: 200px; position: absolute; left: 0; top: 0px; border-right: 1px solid #c6093b;}
 article {border: none}
