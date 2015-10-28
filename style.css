@@ -902,6 +902,8 @@ a {font-color: #0033a0;}
 .site-branding a {margin-bottom: 0px; }
 
 article {padding: 8px; border-color: #c6093b #d6194b #e6295b #d6194b; border-radius: 2px; border-style: solid; border-width: 1px;}
+nav {padding-left: 8px; padding-right: 8px;}
+nav a {font-color: #777; font-size: small; font-family: 'PT Caption'}
 
 .entry-content {margin-top: 2px;}
 /* #primary-menu {position: absolute; top: 35px; left: 350px; width: 250px; font-size: x-small} */
@@ -970,15 +972,24 @@ article {border: none}
 }
 
 /*  Tablet Layout: 768px. */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-.hfeed{}
-.site-header{width:100%;padding:0 10%;}
-.site-main{width:100%;padding:0;overflow:auto;}
-.content-area{width:63%;padding:0;float:left;display:inline; /* background-color: red; */}
-.widget-area{width:35%;padding:0;float:right;display:inline;}
-.site-footer{width:100%;padding:0;}
-#page {width: 600px; margin: auto;}
+@media only screen and (min-width: 768px) and (max-width: 1000px) {
+#secondary {max-width: 200px; position: absolute; left: 568px; top: 50px; border-left: 3px #ccc solid; padding-left: 1em; margin-left: 1em;}
+#primary {max-width: 568px;}
+#page {max-width: 768px;  position: relative;}
+#front .site-footer {margin-top:2000px;}
+#front .hfeed {width: 768px}
+#front #main {position: relative; width: 768px; margin: auto; }
+#front .cat-links {display: none} /* Don't show category links on front page -- already organized by category */
+#highlighted {width: 368px; position: absolute; left: 200px; top: 0px; }
+#highlighted > h2 {display: none}
+#highlighted article {padding: 0em 1em 3px 1em; border: none}
+#region-two {width: 200px; left: 568px; top: 0px; position: absolute; max-height: 2000px; border-left: 1px solid #c6093b;}
+#region-three {width: 174px; position: absolute; left: 200px; top: 500px; max-height: 1500px; border-right: 1px solid #c6093b;}
+#region-four {width: 174px; position: absolute; left: 374px; top: 500px; max-height: 1500px;}
+#region-five {width: 200px; position: absolute; left: 0; top: 0px; border-right: 1px solid #c6093b;}
+article {border: none}
 }
+
 /*  Mobile Layout: 320px. */
 @media only screen and (max-width: 767px) {
 .hfeed{width:100%;padding:0 10%;}
