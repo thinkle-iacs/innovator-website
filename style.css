@@ -1007,6 +1007,8 @@ article {border: none}
 .menu-toggle li.menu-item {float: none; display: block; position: relative;}
 .main-navigation li {float: none; display: block; position: relative;}
 #primary-menu {position: absolute; top: 28px; left: -16px;}
+#primary-menu li {float: none}
+#primary-menu a {background: linear-gradient(#fff,#ddf); color: #0033a0;}
 
 }
 /*  Wide Mobile Layout: 480px. */
