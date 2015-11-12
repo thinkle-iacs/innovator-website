@@ -998,6 +998,8 @@ article {border: none}
 .content-area{width:100%;padding:0; /* background-color: green; */}
 .widget-area{width:100%;padding:0;}
 .site-footer{width:100%;padding:0;}
+#masthead .site-branding img {width: 161px; height: 43px; float: right;}
+
 }
 /*  Wide Mobile Layout: 480px. */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
