@@ -1005,7 +1005,8 @@ article {border: none}
 .menu-toggle {position: absolute; top: 0px; left: -24px; visibility: hidden}
 .menu-toggle:before {content: '\f333'; font-family: dashicons; visibility: visible; font-size: 23px;}
 .menu-toggle li.menu-item {float: none; display: block; position: relative;}
-#primary-menu {position: absolute; top: 28px; left: 16px;}
+.main-navigation li {float: none; display: block; position: relative;}
+#primary-menu {position: absolute; top: 28px; left: -16px;}
 
 }
 /*  Wide Mobile Layout: 480px. */
