@@ -183,41 +183,41 @@ get_header(); ?>
 				if ( $(el).css('max-height') ) {$(el).css({'max-height':'auto'})}
 			}
 	    var hl_bottom = $('#highlighted').height()
-            console.log('move three and four to',hl_bottom);
-            $('#region-three').css({'top':hl_bottom})
-            $('#region-four').css({'top':hl_bottom})
-            var total_bottom = $('#region-three').height()+hl_bottom
-            if ($('#region-four').height()+hl_bottom > total_bottom) { total_bottom = $('#region-four').height()+hl_bottom}
-            if ($('#region-two').height() > total_bottom) {total_bottom = $('#region-two').height()}
-            if ($('#region-five').height() > total_bottom) {total_bottom = $('#region-five').height()}
-            console.log('put footer at ',total_bottom);
-            $('footer#colophon').css({'margin-top':total_bottom})
-						console.log('Adjust all our columns to be the right size...');
-						// We should probably move this to styles.css...
-						$('article').css({'border':'none'});
-						$('#region-two').css({'border-left':'1px #c6093b solid '})
-						$('#region-five').css({'border-right':'1px #c6093b solid '})
-						$('#region-three').css({'border-right':'1px #c6093b solid '})
-						$('#highlighted').css({'border-bottom':'1px #c6093b solid '})
-						// Now adjust heights
-						console.log('heights - ',total_bottom)
-						$('#region-two').css({'height':total_bottom,'max-height':total_bottom})
-						$('#region-five').css({'height':total_bottom,'max-height':total_bottom})
-						var secondary_height = total_bottom - hl_bottom
-						console.log('secondary height - ',secondary_height)
-						$('#region-three').css({'height':secondary_height,'max-height':secondary_height})
-						$('#region-four').css({'height':secondary_height,'max-height':secondary_height})
-        }
-       else {
-         console.log('not in absolute mode')
-				 $('#region-two').css({'height':'auto'})
-				 $('#region-five').css({'height':'auto'})
-				 $('#region-three').css({'height':'auto'})
-				 $('#region-four').css({'height':'auto'})
-       }
+      console.log('move three and four to',hl_bottom);
+      $('#region-three').css({'top':hl_bottom})
+      $('#region-four').css({'top':hl_bottom})
+      var total_bottom = $('#region-three').height()+hl_bottom
+      if ($('#region-four').height()+hl_bottom > total_bottom) { total_bottom = $('#region-four').height()+hl_bottom}
+      if ($('#region-two').height() > total_bottom) {total_bottom = $('#region-two').height()}
+      if ($('#region-five').height() > total_bottom) {total_bottom = $('#region-five').height()}
+      console.log('put footer at ',total_bottom);
+      $('footer#colophon').css({'margin-top':total_bottom})
+			console.log('Adjust all our columns to be the right size...');
+			// We should probably move this to styles.css...
+			$('article').css({'border':'none'});
+			$('#region-two').css({'border-left':'1px #c6093b solid '})
+			$('#region-five').css({'border-right':'1px #c6093b solid '})
+			$('#region-three').css({'border-right':'1px #c6093b solid '})
+			$('#highlighted').css({'border-bottom':'1px #c6093b solid '})
+			// Now adjust heights
+			console.log('heights - ',total_bottom)
+			$('#region-two').css({'height':total_bottom,'max-height':total_bottom})
+			$('#region-five').css({'height':total_bottom,'max-height':total_bottom})
+			var secondary_height = total_bottom - hl_bottom
+			console.log('secondary height - ',secondary_height)
+			$('#region-three').css({'height':secondary_height,'max-height':secondary_height})
+			$('#region-four').css({'height':secondary_height,'max-height':secondary_height})
     }
-		$(document).ready(function () {
-															 update_layout();
-															 $(window).resize(update_layout);
-															 })
+    else {
+      console.log('not in absolute mode')
+			$('#region-two').css({'height':'auto'})
+			$('#region-five').css({'height':'auto'})
+			$('#region-three').css({'height':'auto'})
+			$('#region-four').css({'height':'auto'})
+    }
+  }
+$(document).ready(function () {
+	update_layout();
+	$(window).resize(update_layout);
+})
 </script>
