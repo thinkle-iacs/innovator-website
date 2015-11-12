@@ -90,6 +90,7 @@ get_header(); ?>
 		<div id="region-three" class="layout-region">
 		  <h2>Opinion</h2>
 		  <?php $query3 = new WP_Query( array( 'category_name' => 'opinion',
+			                                      			'posts_per_page' => 3,
 											                  			    'category__not_in' => array( 13 )
           ) ); ?>
 
@@ -113,6 +114,7 @@ get_header(); ?>
 		<div id="region-four" class="layout-region">
 		  		  <h2>Arts</h2>
 		  <?php $query4 = new WP_Query( array( 'category_name' => 'arts',
+			                                      			'posts_per_page' => 3,
 											                  			    'category__not_in' => array( 13 ) )); ?>
 
 			<?php /* Start the Loop */ ?>
@@ -136,6 +138,7 @@ get_header(); ?>
 		<div id="region-five" class="layout-region">
 		  		  <h2>Features</h2>
 		  <?php $query5 = new WP_Query( array( 'category_name' => 'features',
+			                                      			'posts_per_page' => 5,
 											                  			    'category__not_in' => array( 13 ) )); ?>
 
 			<?php /* Start the Loop */ ?>
@@ -171,6 +174,12 @@ get_header(); ?>
 	function update_layout () {
       console.log('hello world!');
         if ($('#highlighted').css('position') == 'absolute') { // Test whether we are using the fancy absolute layout
+				/* Wipe out max-height's which are confusing us */
+				els = ['#region-two','#region-three','#region-four','#region-five','#highlighted']
+				for (var i=0; i<els.length; i++) {
+				  el = els[i]
+					if ($(el).css('max-height')) {$(el).css('max-height':'auto')}
+				}
 	    var hl_bottom = $('#highlighted').height()
             console.log('move three and four to',hl_bottom);
             $('#region-three').css({'top':hl_bottom})
@@ -190,12 +199,12 @@ get_header(); ?>
 						$('#highlighted').css({'border-bottom':'1px #c6093b solid '})
 						// Now adjust heights
 						console.log('heights - ',total_bottom)
-						$('#region-two').css({'height':total_bottom})
-						$('#region-five').css({'height':total_bottom})
+						$('#region-two').css({'height':total_bottom,'max-height':total_bottom})
+						$('#region-five').css({'height':total_bottom,'max-height':total_bottom})
 						var secondary_height = total_bottom - hl_bottom
 						console.log('secondary height - ',secondary_height)
-						$('#region-three').css({'height':secondary_height})
-						$('#region-four').css({'height':secondary_height})
+						$('#region-three').css({'height':secondary_height,'max-height':secondary_height})
+						$('#region-four').css({'height':secondary_height,'max-height':secondary_height})
         }
        else {
          console.log('not in absolute mode')
