@@ -998,7 +998,7 @@ article {border: none}
 .content-area{width:100%;padding:0; /* background-color: green; */}
 .widget-area{width:100%;padding:0;}
 .site-footer{width:100%;padding:0;}
-#masthead {position: fixed;} /* container for absolutes */
+#masthead {position: fixed; background: linear-gradient(rgba(255,255,255,255),rgba(255,255,255,254) 70%,rgba(255,255,255,0) 90%);} /* container for absolutes */
 #main {margin-top: 45px;}
 #masthead .site-branding {margin-left: 18px; float: left;}
 #masthead p {font-size: x-small; margin-top: -10px;}
