@@ -168,18 +168,20 @@ get_header(); ?>
 <?php get_footer(); ?>
 </div>
 <!-- Hinkle adds madness -->
-<!-- we probably shouldn't be shoving javascript down here, but it works -->
+<!-- we probably shouldn\'t be shoving javascript down here, but it works -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 <script>
 	function update_layout () {
-      console.log('hello world!');
-        if ($('#highlighted').css('position') == 'absolute') { // Test whether we are using the fancy absolute layout
-				/* Wipe out max-height's which are confusing us */
-				els = ['#region-two','#region-three','#region-four','#region-five','#highlighted']
-				for (var i=0; i<els.length; i++) {
-				  el = els[i]
-					if ($(el).css('max-height')) {$(el).css('max-height':'auto')}
-				}
+		console.log('hello world!');
+		if ($('#highlighted').css('position') == 'absolute') { // Test whether we are using the fancy absolute layout
+			/* Wipe out max-height's which are confusing us */
+			els = ['#region-two','#region-three',
+						 '#region-four','#region-five','#highlighted'
+						]
+			for (var i=0; i<els.length; i++) {
+				el = els[i]
+				if ( $(el).css('max-height') ) {$(el).css({'max-height':'auto'})}
+			}
 	    var hl_bottom = $('#highlighted').height()
             console.log('move three and four to',hl_bottom);
             $('#region-three').css({'top':hl_bottom})
