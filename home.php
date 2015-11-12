@@ -43,6 +43,7 @@ get_header(); ?>
 		<div id="region-two" class="layout-region">
 		  <h2>News</h2>
 		  <?php $query2 = new WP_Query( array( 'category_name' => 'news',
+			                                      			'posts_per_page' => 3,
 											                  			    'category__not_in' => array( 13 ) )); ?>
 
 			<?php /* Start the Loop */ ?>
@@ -65,6 +66,7 @@ get_header(); ?>
 		  <h2>Sports</h2>
 
 		  <?php $query2 = new WP_Query( array( 'category_name' => 'sports',
+			                                      			'posts_per_page' => 3,
 											                  			    'category__not_in' => array( 13 ) )); ?>
 
 			<?php /* Start the Loop */ ?>
